@@ -108,7 +108,7 @@ const IndexPage = () => {
             />
           </div>
         )}
-        <div ref={dummyDivRef}></div>
+        <div style={{ marginBottom: 'auto' }} ref={dummyDivRef}></div>
       </div>
     </main>
   );
