@@ -25,7 +25,7 @@ const IndexPage = () => {
       <title>Home Page</title>
       <div
         className="bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64"
-        style={{ width: '100%', height: '100vh', fontSize: '18px' }}
+        style={{ width: '100%', minHeight: '100vh', fontSize: '18px', maxHeight: 'fit-content' }}
       >
         {INPUT.split('')
           .slice(0, counter)
