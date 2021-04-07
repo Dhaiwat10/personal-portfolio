@@ -24,7 +24,7 @@ span:last-of-type {
   text-transform: none;
   /* opacity: 0; */
   animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 0.4s;
 }
 
 @keyframes fadeIn {
