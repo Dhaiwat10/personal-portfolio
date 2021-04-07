@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const INPUT =
-  "Hi I'm Dhaiwat. George William Russell is a British racing driver currently competing in Formula One, contracted to Williams. He was the 2018 FIA Formula 2 Champion for ART and the 2017 GP3 Series Champion.";
+  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old freelance software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- AWS\n- Solidity\n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n\n> Impressed? Let's talk.";
 
 // markup
 const IndexPage = () => {
@@ -16,22 +16,30 @@ const IndexPage = () => {
     if (!completed) {
       setTimeout(() => {
         setCounter((counter) => counter + 1);
-      }, [50]);
+      }, [25]);
     }
-  }, [counter]);
+  }, [counter, completed]);
 
   return (
     <main>
       <title>Home Page</title>
       <div
-        className="bg-accentedBlack font-mono p-4 text-white"
-        style={{ width: '100%', height: '100vh' }}
+        className="bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64"
+        style={{ width: '100%', height: '100vh', fontSize: '18px' }}
       >
         {INPUT.split('')
           .slice(0, counter)
-          .map((item, index) => (
-            <span key={index}>{item}</span>
-          ))}
+          .map((item, index) => {
+            if (item === '\n') {
+              return (
+                <>
+                  <br />
+                </>
+              );
+            } else {
+              return <span key={index}>{item}</span>;
+            }
+          })}
       </div>
     </main>
   );
