@@ -45,8 +45,6 @@ const IndexPage = () => {
   const [counter, setCounter] = React.useState(1);
   const [completed, setCompleted] = React.useState(false);
 
-  const dummyDivRef = React.useRef(null);
-
   React.useEffect(() => {
     if (counter === INPUT.length - 1) {
       setCompleted(true);
@@ -64,7 +62,8 @@ const IndexPage = () => {
   }, [counter]);
 
   const scrollToBottom = () => {
-    dummyDivRef.current.scrollIntoView({ behaviour: 'smooth' });
+    const lastChild = document.getElementById('container').lastChild;
+    lastChild.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -75,6 +74,7 @@ const IndexPage = () => {
         <link rel="icon" href={favicon} />
       </Helmet>
       <div
+        id="container"
         className="bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64"
         style={{
           width: '100%',
@@ -108,7 +108,6 @@ const IndexPage = () => {
             />
           </div>
         )}
-        <div style={{ marginBottom: 'auto' }} ref={dummyDivRef}></div>
       </div>
     </main>
   );
