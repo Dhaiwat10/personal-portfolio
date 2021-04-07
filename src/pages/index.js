@@ -108,8 +108,8 @@ const IndexPage = () => {
             />
           </div>
         )}
+        <div ref={dummyDivRef}></div>
       </div>
-      <div ref={dummyDivRef}></div>
     </main>
   );
 };
