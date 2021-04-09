@@ -16,5 +16,13 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-CN6F30XYZR', // Google Analytics / GA
+        ],
+      },
+    },
   ],
 };
