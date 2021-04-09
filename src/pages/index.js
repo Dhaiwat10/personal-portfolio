@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
-
-const INPUT =
-  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old freelance software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- AWS\n- Solidity\n\n> ❤️ Live projects that I have worked on:\n% \n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n- And more!\n\n> Impressed? 👀 Let's talk! 👇🏼";
+import cursor from '../images/cursor.gif';
 
 const Link = ({ label, href }) => (
   <a className="underline" href={href} target="_blank" rel="noreferrer">
@@ -33,20 +31,20 @@ const Projects = () => (
     <br />
 
     <span style={{ borderRight: 'none' }}>- </span>
-    <Link
-      label="Zen Quotes"
-      href="https://github.com/Dhaiwat10/zenquotes"
-    />
+    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
   </div>
 );
 
+const INPUT =
+  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old freelance software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- AWS\n- Solidity\n\n> ❤️ Live projects that I have worked on:\n% \n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n- And more!\n\n> Impressed? 👀 Let's talk! 👇🏼";
+
 // markup
 const IndexPage = () => {
-  const [counter, setCounter] = React.useState(1);
+  const [counter, setCounter] = React.useState(0);
   const [completed, setCompleted] = React.useState(false);
 
   React.useEffect(() => {
-    if (counter === INPUT.length - 1) {
+    if (counter === INPUT.length) {
       setCompleted(true);
     }
 
@@ -59,12 +57,9 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     scrollToBottom();
-  }, [counter]);
+  }, []);
 
-  const scrollToBottom = () => {
-    const lastChild = document.getElementById('container').lastChild;
-    lastChild.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToBottom = () => {};
 
   return (
     <main>
@@ -83,23 +78,20 @@ const IndexPage = () => {
           maxHeight: 'fit-content',
         }}
       >
-        {INPUT.split('')
-          .slice(0, counter)
+        {INPUT.slice(0, counter)
+          .split('')
           .map((item, index) => {
             if (item === '\n') {
-              return (
-                <React.Fragment key={index}>
-                  <br />
-                </React.Fragment>
-              );
+              return <br key={index} />;
             } else if (item === '%') {
               return <Projects key={index} />;
             } else {
-              return <span key={index}>{item}</span>;
+              return item;
             }
           })}
+        <img src={cursor} id="cursor" />
         {completed && (
-          <div className="mt-4 gap-4 flex fadeIn">
+          <div className="mt-4 gap-12 flex fadeIn">
             <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
             <Link label="GitHub" href="https://github.com/Dhaiwat10" />
             <Link

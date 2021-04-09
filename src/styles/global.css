@@ -4,20 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
-span:last-of-type {
-  border-right: solid 3px orange;
-  animation: animated-cursor 600ms steps(29) infinite;
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor {
-  from {
-    border-right-color: orange;
-  }
-  to {
-    border-right-color: transparent;
-  }
+#cursor {
+  display: inline;
+  height: 20px;
+  width: auto;
+  margin-left: -5px;
+  margin-top: -5px;
 }
 
 .fadeIn {
