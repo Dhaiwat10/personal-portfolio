@@ -35,7 +35,7 @@ const Projects = () => (
     <span style={{ borderRight: 'none' }}>- </span>
     <Link
       label="Zen Quotes"
-      href="https://discord.com/oauth2/authorize?client_id=820275367083245578&permissions=0&scope=bot"
+      href="https://github.com/Dhaiwat10/zenquotes"
     />
   </div>
 );
