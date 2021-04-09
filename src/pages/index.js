@@ -68,6 +68,10 @@ const IndexPage = () => {
     <main>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="I am Dhaiwat - a 20-year-old software engineer skilled with Blockchain, React, TypeScript and more!"
+        />
         <title>Dhaiwat Pandya</title>
         <link rel="icon" href={favicon} />
       </Helmet>
@@ -92,7 +96,7 @@ const IndexPage = () => {
               return item;
             }
           })}
-        <img alt='Cursor' src={cursor} id="cursor" />
+        <img alt="Cursor" src={cursor} id="cursor" />
         {completed && (
           <div className="mt-4 gap-12 flex fadeIn">
             <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
