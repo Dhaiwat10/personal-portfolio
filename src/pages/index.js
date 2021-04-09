@@ -57,9 +57,12 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     scrollToBottom();
-  }, []);
+  }, [counter]);
 
-  const scrollToBottom = () => {};
+  const scrollToBottom = () => {
+    const el = document.getElementsByTagName('body')[0];
+    el.lastChild.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <main>
