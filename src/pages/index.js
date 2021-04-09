@@ -92,7 +92,7 @@ const IndexPage = () => {
               return item;
             }
           })}
-        <img src={cursor} id="cursor" />
+        <img alt='Cursor' src={cursor} id="cursor" />
         {completed && (
           <div className="mt-4 gap-12 flex fadeIn">
             <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
