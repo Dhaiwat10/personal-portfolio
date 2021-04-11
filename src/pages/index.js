@@ -3,8 +3,13 @@ import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
 import cursor from '../images/cursor.gif';
 
-const Link = ({ label, href }) => (
-  <a className="underline" href={href} target="_blank" rel="noreferrer">
+const Link = ({ label, href, margin = false }) => (
+  <a
+    className={`underline ${margin && 'mr-12'}`}
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+  >
     {label}
   </a>
 );
@@ -12,7 +17,10 @@ const Link = ({ label, href }) => (
 const Projects = () => (
   <div style={{ marginBottom: '-18px' }} className="fadeIn">
     <span>- </span>
-    <Link label="Project Lockdown" href="https://projectlockdown.world" />
+    <Link
+      label="Project Lockdown"
+      href="https://github.com/TheIOFoundation/ProjectLockdown/"
+    />
     <br />
 
     <span>- </span>
@@ -26,7 +34,7 @@ const Projects = () => (
     <span>- </span>
     <Link
       label="Clean Twitter"
-      href="https://chrome.google.com/webstore/detail/clean-twitter/ibcjnfhpdjinbcmojnmpnokcgfljiebb?hl=en&authuser=0"
+      href="https://github.com/dhaiwat10/clean-twitter"
     />
     <br />
 
@@ -56,12 +64,13 @@ const IndexPage = () => {
   }, [counter, completed]);
 
   React.useEffect(() => {
-    scrollToBottom();
-  }, [counter]);
+    if (completed) {
+      scrollToBottom();
+    }
+  }, [completed]);
 
   const scrollToBottom = () => {
-    const el = document.getElementsByTagName('body')[0];
-    el.lastChild.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   };
 
   return (
@@ -98,9 +107,17 @@ const IndexPage = () => {
           })}
         <img alt="Cursor" src={cursor} id="cursor" />
         {completed && (
-          <div className="mt-4 gap-12 flex fadeIn">
-            <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
-            <Link label="GitHub" href="https://github.com/Dhaiwat10" />
+          <div className="mt-4 fadeIn">
+            <Link
+              margin={true}
+              label="Email"
+              href="mailto:dhaiwatpandya@gmail.com"
+            />
+            <Link
+              margin={true}
+              label="GitHub"
+              href="https://github.com/Dhaiwat10"
+            />
             <Link
               label="LinkedIn"
               href="https://linkedin.com/in/dhaiwat-pandya"
