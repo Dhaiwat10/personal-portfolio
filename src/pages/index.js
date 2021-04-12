@@ -28,6 +28,10 @@ const Projects = () => (
     <br />
 
     <span>- </span>
+    <Link label="Kickstart" href="https://github.com/Dhaiwat10/kickstart" />
+    <br />
+
+    <span>- </span>
     <Link label="Vof.Is" href="https://vofis.vercel.app" />
     <br />
 
