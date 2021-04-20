@@ -27,12 +27,19 @@ const Projects = () => (
     <Link label="Barça Universal" href="https://barcauniversal.com" />
     <br />
 
-    {/* <span>- </span>
-    <Link label="Kickstart" href="https://github.com/Dhaiwat10/kickstart" />
-    <br /> */}
+    <span>- </span>
+    <Link
+      label="Ropsten Faucet"
+      href="https://ropsten-faucet.dhaiwatpandya.com"
+    />
+    <br />
 
     <span>- </span>
     <Link label="Vof.Is" href="https://vofis.vercel.app" />
+    <br />
+
+    <span style={{ borderRight: 'none' }}>- </span>
+    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
     <br />
 
     <span>- </span>
@@ -40,10 +47,6 @@ const Projects = () => (
       label="Clean Twitter"
       href="https://github.com/dhaiwat10/clean-twitter"
     />
-    <br />
-
-    <span style={{ borderRight: 'none' }}>- </span>
-    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
   </div>
 );
 
