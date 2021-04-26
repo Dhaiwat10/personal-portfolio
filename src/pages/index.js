@@ -16,6 +16,17 @@ const Link = ({ label, href, margin = false }) => (
 
 const Projects = () => (
   <div style={{ marginBottom: '-18px' }} className="fadeIn">
+    <span style={{ borderRight: 'none' }}>- </span>
+    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
+    <br />
+
+    <span>- </span>
+    <Link
+      label="Ropsten Faucet"
+      href="https://ropsten-faucet.dhaiwatpandya.com"
+    />
+    <br />
+
     <span>- </span>
     <Link
       label="Project Lockdown"
@@ -28,18 +39,7 @@ const Projects = () => (
     <br />
 
     <span>- </span>
-    <Link
-      label="Ropsten Faucet"
-      href="https://ropsten-faucet.dhaiwatpandya.com"
-    />
-    <br />
-
-    <span>- </span>
     <Link label="Vof.Is" href="https://vofis.vercel.app" />
-    <br />
-
-    <span style={{ borderRight: 'none' }}>- </span>
-    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
     <br />
 
     <span>- </span>
