@@ -1,58 +1,58 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import favicon from "../images/favicon-16x16.png";
-import cursor from "../images/cursor.gif";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import favicon from '../images/favicon-16x16.png';
+import cursor from '../images/cursor.gif';
 
 const Link = ({ label, href, margin = false }) => (
   <a
-    className={`underline ${margin && "mr-12"}`}
+    className={`underline ${margin && 'mr-12'}`}
     href={href}
-    target="_blank"
-    rel="noreferrer"
+    target='_blank'
+    rel='noreferrer'
   >
     {label}
   </a>
 );
 
 const Projects = () => (
-  <div style={{ marginBottom: "-18px" }} className="fadeIn">
-    <span style={{ borderRight: "none" }}>- </span>
-    <Link label="Zen Quotes" href="https://github.com/Dhaiwat10/zenquotes" />
-    <br />
-
-    <span>- </span>
+  <div style={{ marginBottom: '-18px' }} className='fadeIn'>
+    <span style={{ borderRight: 'none' }}>- </span>
     <Link
-      label="Ropsten Faucet"
-      href="https://ropsten-faucet.dhaiwatpandya.com"
+      label='react-link-preview (npm)'
+      href='https://www.npmjs.com/package/@dhaiwat10/react-link-preview'
     />
     <br />
 
     <span>- </span>
     <Link
-      label="react-link-preview (npm)"
-      href="https://www.npmjs.com/package/@dhaiwat10/react-link-preview"
+      label='Ropsten Faucet'
+      href='https://github.com/dhaiwat10/ropsten-faucet'
     />
     <br />
 
     <span>- </span>
+    <Link label='Zen' href='https://github.com/Dhaiwat10/zenquotes' />
+    <br />
+
+    <span>- </span>
     <Link
-      label="Project Lockdown"
-      href="https://github.com/TheIOFoundation/ProjectLockdown/"
+      label='Project Lockdown'
+      href='https://github.com/TheIOFoundation/ProjectLockdown/'
     />
     <br />
 
     <span>- </span>
-    <Link label="Barça Universal" href="https://barcauniversal.com" />
+    <Link label='Barça Universal' href='https://barcauniversal.com' />
     <br />
 
-    <span>- </span>
-    <Link label="Vof.Is" href="https://vofis.vercel.app" />
-    <br />
+    {/* <span>- </span>
+    <Link label='Vof.Is' href='https://vofis.vercel.app' />
+    <br /> */}
 
     <span>- </span>
     <Link
-      label="Clean Twitter"
-      href="https://github.com/dhaiwat10/clean-twitter"
+      label='Clean Twitter'
+      href='https://github.com/dhaiwat10/clean-twitter'
     />
   </div>
 );
@@ -89,61 +89,61 @@ const IndexPage = () => {
   }, []);
 
   const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <main>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet='utf-8' />
         <meta
-          name="description"
-          content="I am Dhaiwat - a 20-year-old software engineer skilled with Blockchain, React, TypeScript and more!"
+          name='description'
+          content='I am Dhaiwat - a 20-year-old software engineer skilled with Blockchain, React, TypeScript and more!'
         />
         <title>Dhaiwat Pandya</title>
-        <link rel="icon" href={favicon} />
+        <link rel='icon' href={favicon} />
       </Helmet>
       <div
-        id="container"
-        className="bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64"
+        id='container'
+        className='bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64'
         style={{
-          width: "100%",
-          minHeight: "100vh",
-          fontSize: "18px",
-          maxHeight: "fit-content",
+          width: '100%',
+          minHeight: '100vh',
+          fontSize: '18px',
+          maxHeight: 'fit-content',
         }}
       >
         {INPUT.slice(0, counter)
-          .split("")
+          .split('')
           .map((item, index) => {
-            if (item === "\n") {
+            if (item === '\n') {
               return <br key={index} />;
-            } else if (item === "%") {
+            } else if (item === '%') {
               return <Projects key={index} />;
             } else {
               return item;
             }
           })}
-        <img alt="Cursor" src={cursor} id="cursor" />
+        <img alt='Cursor' src={cursor} id='cursor' />
         {completed && (
-          <div className="mt-4 fadeIn">
+          <div className='mt-4 fadeIn'>
             <Link
               margin={true}
-              label="Email"
-              href="mailto:dhaiwatpandya@gmail.com"
+              label='Email'
+              href='mailto:dhaiwatpandya@gmail.com'
             />
             <Link
               margin={true}
-              label="GitHub"
-              href="https://github.com/Dhaiwat10"
+              label='GitHub'
+              href='https://github.com/Dhaiwat10'
             />
             <Link
-              label="LinkedIn"
-              href="https://linkedin.com/in/dhaiwat-pandya"
+              label='LinkedIn'
+              href='https://linkedin.com/in/dhaiwat-pandya'
             />
           </div>
         )}
