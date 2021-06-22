@@ -3,13 +3,8 @@ import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
 import cursor from '../images/cursor.gif';
 
-const Link = ({ label, href, margin = false }) => (
-  <a
-    className={`underline ${margin && 'mr-12'}`}
-    href={href}
-    target='_blank'
-    rel='noreferrer'
-  >
+const Link = ({ label, href }) => (
+  <a className={`underline`} href={href} target='_blank' rel='noreferrer'>
     {label}
   </a>
 );
@@ -153,22 +148,10 @@ const IndexPage = () => {
           })}
         <img alt='Cursor' src={cursor} id='cursor' />
         {completed && (
-          <div className='mt-4 fadeIn'>
-            <Link
-              margin={true}
-              label='Email'
-              href='mailto:dhaiwatpandya@gmail.com'
-            />
-            <Link
-              margin={true}
-              label='GitHub'
-              href='https://github.com/Dhaiwat10'
-            />
-            <Link
-              margin={true}
-              label='Blog'
-              href='https://blog.dhaiwatpandya.com'
-            />
+          <div className='bottom-links mt-4 fadeIn'>
+            <Link label='Email' href='mailto:dhaiwatpandya@gmail.com' />
+            <Link label='GitHub' href='https://github.com/Dhaiwat10' />
+            <Link label='Blog' href='https://blog.dhaiwatpandya.com' />
             <Link
               label='LinkedIn'
               href='https://linkedin.com/in/dhaiwat-pandya'

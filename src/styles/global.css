@@ -71,3 +71,15 @@ body {
     opacity: 1;
   }
 }
+
+.bottom-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .bottom-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
