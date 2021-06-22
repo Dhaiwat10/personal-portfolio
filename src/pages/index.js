@@ -57,8 +57,29 @@ const Projects = () => (
   </div>
 );
 
+const Blog = () => {
+  let msg = `> ✍ I write about building quality software at `;
+
+  return (
+    <div>
+      <span className='fadeIn'>
+        {msg}{' '}
+        <a
+          id='blog-link'
+          href='https://blog.dhaiwatpandya.com'
+          target='_blank'
+          rel='noreferrer'
+        >
+          my blog
+        </a>
+        . (click!)
+      </span>
+    </div>
+  );
+};
+
 const INPUT =
-  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- AWS\n- Solidity\n\n> ❤️ Live projects that I have worked on:\n% \n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n- And more!\n\n> Impressed? 👀 Let's talk! 👇🏼";
+  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- Serverless\n- Solidity\n\n~\n > ❤️ Live projects that I have worked on:\n% \n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n- And more!\n\n> Impressed? 👀 Let's talk! 👇🏼";
 
 // markup
 const IndexPage = () => {
@@ -109,9 +130,9 @@ const IndexPage = () => {
       </Helmet>
       <div
         id='container'
-        className='bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64'
+        className='bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64 mx-auto'
         style={{
-          width: '100%',
+          width: 'fit-content',
           minHeight: '100vh',
           fontSize: '18px',
           maxHeight: 'fit-content',
@@ -124,6 +145,8 @@ const IndexPage = () => {
               return <br key={index} />;
             } else if (item === '%') {
               return <Projects key={index} />;
+            } else if (item === '~') {
+              return <Blog />;
             } else {
               return item;
             }
@@ -140,6 +163,11 @@ const IndexPage = () => {
               margin={true}
               label='GitHub'
               href='https://github.com/Dhaiwat10'
+            />
+            <Link
+              margin={true}
+              label='Blog'
+              href='https://blog.dhaiwatpandya.com'
             />
             <Link
               label='LinkedIn'

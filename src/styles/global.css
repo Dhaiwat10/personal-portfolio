@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
+body {
+  background-color: #111 !important;
+}
+
 #cursor {
   display: inline;
   height: 20px;
@@ -17,6 +21,10 @@
   /* opacity: 0; */
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 0.4s;
+}
+
+#blog-link {
+  border-bottom: 2px solid rgb(37, 194, 121);
 }
 
 @keyframes fadeIn {
