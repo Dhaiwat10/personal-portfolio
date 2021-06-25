@@ -13,10 +13,25 @@ const Projects = () => (
   <div style={{ marginBottom: '-18px' }} className='fadeIn'>
     <span style={{ borderRight: 'none' }}>- </span>
     <Link
-      label='react-link-preview (npm)'
+      label='react-link-preview'
       href='https://www.npmjs.com/package/@dhaiwat10/react-link-preview'
     />
     <br />
+
+    <span>- </span>
+    <Link
+      label='daily.dev'
+      href='https://github.com/dailydotdev/apps'
+    />
+    <br />
+
+    <span>- </span>
+    <Link
+      label='Project Lockdown'
+      href='https://github.com/TheIOFoundation/ProjectLockdown/'
+    />
+    <br />
+
 
     <span>- </span>
     <Link
@@ -27,13 +42,6 @@ const Projects = () => (
 
     <span>- </span>
     <Link label='Zen' href='https://github.com/Dhaiwat10/zenquotes' />
-    <br />
-
-    <span>- </span>
-    <Link
-      label='Project Lockdown'
-      href='https://github.com/TheIOFoundation/ProjectLockdown/'
-    />
     <br />
 
     <span>- </span>
