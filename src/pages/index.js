@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
+import thumb from '../images/thumb.png';
 import cursor from '../images/cursor.gif';
 import { Counter } from '../components';
 
@@ -20,10 +21,7 @@ const Projects = () => (
     <br />
 
     <span>- </span>
-    <Link
-      label='daily.dev'
-      href='https://github.com/dailydotdev/apps'
-    />
+    <Link label='daily.dev' href='https://github.com/dailydotdev/apps' />
     <br />
 
     <span>- </span>
@@ -32,7 +30,6 @@ const Projects = () => (
       href='https://github.com/TheIOFoundation/ProjectLockdown/'
     />
     <br />
-
 
     <span>- </span>
     <Link
@@ -82,7 +79,12 @@ const Blog = () => {
       </div>
       <br />
       <div className='flex gap-16'>
-        <Counter number={200000} text='users reached' speed={5000} color='#ff7092' />
+        <Counter
+          number={200000}
+          text='users reached'
+          speed={5000}
+          color='#ff7092'
+        />
         <Counter number={12000} text='readers reached' color='#ffde82' />
       </div>
     </>
@@ -131,6 +133,10 @@ const IndexPage = () => {
   return (
     <main>
       <Helmet>
+        <meta
+          property='og:image'
+          content={thumb}
+        />
         <meta charSet='utf-8' />
         <meta
           name='description'
