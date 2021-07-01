@@ -171,7 +171,7 @@ const IndexPage = () => {
             } else if (item === '%') {
               return <Projects key={index} />;
             } else if (item === '~') {
-              return <Blog />;
+              return <Blog key={index} />;
             } else {
               return item;
             }
