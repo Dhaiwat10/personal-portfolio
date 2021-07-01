@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
 import cursor from '../images/cursor.gif';
+import { Counter } from '../components';
 
 const Link = ({ label, href }) => (
   <a className={`underline`} href={href} target='_blank' rel='noreferrer'>
@@ -56,20 +57,27 @@ const Blog = () => {
   let msg = `> ✍ I write about building quality software at `;
 
   return (
-    <div>
-      <span className='fadeIn'>
-        {msg}{' '}
-        <a
-          id='blog-link'
-          href='https://blog.dhaiwatpandya.com'
-          target='_blank'
-          rel='noreferrer'
-        >
-          my blog
-        </a>
-        . (click!)
-      </span>
-    </div>
+    <>
+      <div>
+        <span className='fadeIn'>
+          {msg}{' '}
+          <a
+            id='blog-link'
+            href='https://blog.dhaiwatpandya.com'
+            target='_blank'
+            rel='noreferrer'
+          >
+            my blog
+          </a>
+          . (click!)
+        </span>
+      </div>
+      <br />
+      <div className='flex gap-16'>
+        <Counter number={200000} text='users reached' speed={5000} color='#ff7092' />
+        <Counter number={12000} text='readers reached' color='#ffde82' />
+      </div>
+    </>
   );
 };
 
