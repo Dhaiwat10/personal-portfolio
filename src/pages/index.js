@@ -60,6 +60,7 @@ const Projects = () => (
 
 const Blog = () => {
   let msg = `> ✍ I write about building quality software at `;
+  let msg2 = ` and run a weekly `;
 
   return (
     <>
@@ -74,11 +75,21 @@ const Blog = () => {
           >
             my blog
           </a>
-          . (click!)
+          <br />
+          {msg2}
+          <a
+            id='blog-link'
+            href='https://buttondown.email/dhaiwat'
+            target='_blank'
+            rel='noreferrer'
+          >
+            newsletter
+          </a>
+          .
         </span>
       </div>
       <br />
-      <div className='flex gap-16'>
+      <div className='flex gap-16 fadeIn'>
         <Counter
           number={200000}
           text='users reached'
@@ -133,10 +144,7 @@ const IndexPage = () => {
   return (
     <main>
       <Helmet>
-        <meta
-          property='og:image'
-          content={thumb}
-        />
+        <meta property='og:image' content={thumb} />
         <meta charSet='utf-8' />
         <meta
           name='description'
