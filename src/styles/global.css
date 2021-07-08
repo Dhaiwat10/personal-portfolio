@@ -8,6 +8,10 @@ body {
   background-color: #111 !important;
 }
 
+::selection {
+  background: #d3793c;
+}
+
 #cursor {
   display: inline;
   height: 20px;
