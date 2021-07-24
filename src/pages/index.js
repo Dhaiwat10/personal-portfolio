@@ -60,7 +60,7 @@ const Projects = () => (
 
 const Blog = () => {
   let msg = `> ✍ I write about building quality software at `;
-  let msg2 = ` and run a weekly `;
+  let msg2 = ` and `;
 
   return (
     <>
@@ -79,11 +79,11 @@ const Blog = () => {
           {msg2}
           <a
             id='blog-link'
-            href='https://buttondown.email/dhaiwat'
+            href='https://www.youtube.com/watch?v=3Q3VXtW5bcc'
             target='_blank'
             rel='noreferrer'
           >
-            newsletter
+            speak at conferences
           </a>
           .
         </span>
@@ -96,7 +96,7 @@ const Blog = () => {
           speed={5000}
           color='#ff7092'
         />
-        <Counter number={12000} text='readers reached' color='#ffde82' />
+        <Counter number={16000} text='readers reached' color='#ffde82' />
       </div>
     </>
   );
