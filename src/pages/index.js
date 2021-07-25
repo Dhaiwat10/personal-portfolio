@@ -79,7 +79,7 @@ const Blog = () => {
           {msg2}
           <a
             id='blog-link'
-            href='https://www.youtube.com/watch?v=3Q3VXtW5bcc'
+            href='https://www.youtube.com/watch?v=rZZItYsH8qg'
             target='_blank'
             rel='noreferrer'
           >
