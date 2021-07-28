@@ -16,8 +16,8 @@ const Counter = ({ text, number, speed = 500, color }) => {
   }, [counter, number, speed]);
 
   return (
-    <div className='flex flex-col ml-0'>
-      <span className='font-bold text-2xl' style={{ color }}>
+    <div className="flex flex-col ml-0">
+      <span className="font-bold text-2xl" style={{ color }}>
         {commaNumber(counter)}+
       </span>
       <span>{text}</span>
@@ -31,23 +31,23 @@ const Meta = () => {
 
   return (
     <Helmet>
-      <meta property='og:image' content={`https://dhaiwatpandya.com${thumb}`} />
-      <meta charSet='utf-8' />
-      <meta name='description' content={description} />
+      <meta property="og:image" content={`https://dhaiwatpandya.com${thumb}`} />
+      <meta charSet="utf-8" />
+      <meta name="description" content={description} />
 
       {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@dhaiwat10' />
-      <meta name='twitter:creator' content='@dhaiwat10' />
-      <meta name='twitter:title' content='Dhaiwat Pandya - Software Engineer' />
-      <meta name='twitter:description' content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@dhaiwat10" />
+      <meta name="twitter:creator" content="@dhaiwat10" />
+      <meta name="twitter:title" content="Dhaiwat Pandya - Software Engineer" />
+      <meta name="twitter:description" content={description} />
       <meta
-        name='twitter:image'
+        name="twitter:image"
         content={`https://dhaiwatpandya.com${thumb}`}
       />
 
       <title>Dhaiwat Pandya</title>
-      <link rel='icon' href={favicon} />
+      <link rel="icon" href={favicon} />
     </Helmet>
   );
 };

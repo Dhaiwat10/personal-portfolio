@@ -1,7 +1,7 @@
-import * as React from "react";
-import cursor from "../images/cursor.gif";
-import avi from "../images/avi.jpeg";
-import { Counter, Meta } from "../components";
+import * as React from 'react';
+import cursor from '../images/cursor.gif';
+import avi from '../images/avi.jpeg';
+import { Counter, Meta } from '../components';
 
 const Link = ({ label, href }) => (
   <a className={`underline`} href={href} target="_blank" rel="noreferrer">
@@ -10,8 +10,8 @@ const Link = ({ label, href }) => (
 );
 
 const Projects = () => (
-  <div style={{ marginBottom: "-18px" }} className="fadeIn">
-    <span style={{ borderRight: "none" }}>- </span>
+  <div style={{ marginBottom: '-18px' }} className="fadeIn">
+    <span style={{ borderRight: 'none' }}>- </span>
     <Link
       label="react-link-preview"
       href="https://www.npmjs.com/package/@dhaiwat10/react-link-preview"
@@ -64,7 +64,7 @@ const Blog = () => {
     <>
       <div>
         <span className="fadeIn">
-          {msg}{" "}
+          {msg}{' '}
           <a
             id="blog-link"
             href="https://blog.dhaiwatpandya.com"
@@ -132,11 +132,11 @@ const IndexPage = () => {
   }, []);
 
   const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -146,10 +146,10 @@ const IndexPage = () => {
         id="container"
         className="flex flex-col bg-accentedBlack font-mono text-white mx-auto p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 lg:flex-row xl:flex-row xl:px-64"
         style={{
-          width: "90%",
-          minHeight: "100vh",
-          fontSize: "18px",
-          maxHeight: "fit-content",
+          width: '90%',
+          minHeight: '100vh',
+          fontSize: '18px',
+          maxHeight: 'fit-content',
         }}
       >
         <img
@@ -159,13 +159,13 @@ const IndexPage = () => {
         />
         <div className="content lg:order-1 xl:order-1">
           {INPUT.slice(0, counter)
-            .split("")
+            .split('')
             .map((item, index) => {
-              if (item === "\n") {
+              if (item === '\n') {
                 return <br key={index} />;
-              } else if (item === "%") {
+              } else if (item === '%') {
                 return <Projects key={index} />;
-              } else if (item === "~") {
+              } else if (item === '~') {
                 return <Blog key={index} />;
               } else {
                 return item;
