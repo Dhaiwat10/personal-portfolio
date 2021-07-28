@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
 import thumb from '../images/thumb.png';
 import cursor from '../images/cursor.gif';
+import avi from '../images/avi.jpeg';
 import { Counter } from '../components';
 
 const Link = ({ label, href }) => (
@@ -45,10 +46,6 @@ const Projects = () => (
     <span>- </span>
     <Link label='Barça Universal' href='https://barcauniversal.com' />
     <br />
-
-    {/* <span>- </span>
-    <Link label='Vof.Is' href='https://vofis.vercel.app' />
-    <br /> */}
 
     <span>- </span>
     <Link
@@ -155,7 +152,7 @@ const IndexPage = () => {
       </Helmet>
       <div
         id='container'
-        className='bg-accentedBlack font-mono text-white p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 xl:px-64 mx-auto'
+        className='flex flex-col bg-accentedBlack font-mono text-white mx-auto p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 lg:flex-row xl:flex-row xl:px-64'
         style={{
           width: 'fit-content',
           minHeight: '100vh',
@@ -163,31 +160,38 @@ const IndexPage = () => {
           maxHeight: 'fit-content',
         }}
       >
-        {INPUT.slice(0, counter)
-          .split('')
-          .map((item, index) => {
-            if (item === '\n') {
-              return <br key={index} />;
-            } else if (item === '%') {
-              return <Projects key={index} />;
-            } else if (item === '~') {
-              return <Blog key={index} />;
-            } else {
-              return item;
-            }
-          })}
-        <img alt='Cursor' src={cursor} id='cursor' />
-        {completed && (
-          <div className='bottom-links mt-4 fadeIn'>
-            <Link label='Email' href='mailto:dhaiwatpandya@gmail.com' />
-            <Link label='GitHub' href='https://github.com/Dhaiwat10' />
-            <Link label='Blog' href='https://blog.dhaiwatpandya.com' />
-            <Link
-              label='LinkedIn'
-              href='https://linkedin.com/in/dhaiwat-pandya'
-            />
-          </div>
-        )}
+        <img
+          className='rounded-full h-32 mx-auto mb-8 lg:order-2 xl:order-2 lg:h-40 lg:ml-auto lg:mr-0 xl:h-64 xl:ml-auto xl:mr-0'
+          src={avi}
+          alt='Avatar'
+        />
+        <div className='content lg:order-1 xl:order-1'>
+          {INPUT.slice(0, counter)
+            .split('')
+            .map((item, index) => {
+              if (item === '\n') {
+                return <br key={index} />;
+              } else if (item === '%') {
+                return <Projects key={index} />;
+              } else if (item === '~') {
+                return <Blog key={index} />;
+              } else {
+                return item;
+              }
+            })}
+          <img alt='Cursor' src={cursor} id='cursor' />
+          {completed && (
+            <div className='bottom-links mt-4 fadeIn'>
+              <Link label='Email' href='mailto:dhaiwatpandya@gmail.com' />
+              <Link label='GitHub' href='https://github.com/Dhaiwat10' />
+              <Link label='Blog' href='https://blog.dhaiwatpandya.com' />
+              <Link
+                label='LinkedIn'
+                href='https://linkedin.com/in/dhaiwat-pandya'
+              />
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
