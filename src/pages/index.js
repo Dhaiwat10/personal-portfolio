@@ -1,10 +1,7 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import favicon from '../images/favicon-16x16.png';
-import thumb from '../images/thumb.png';
 import cursor from '../images/cursor.gif';
 import avi from '../images/avi.jpeg';
-import { Counter } from '../components';
+import { Counter, Meta } from '../components';
 
 const Link = ({ label, href }) => (
   <a className={`underline`} href={href} target='_blank' rel='noreferrer'>
@@ -144,16 +141,7 @@ const IndexPage = () => {
 
   return (
     <main>
-      <Helmet>
-        <meta property='og:image' content={thumb} />
-        <meta charSet='utf-8' />
-        <meta
-          name='description'
-          content='I am Dhaiwat - a 20-year-old software engineer skilled with Blockchain, React, TypeScript and more!'
-        />
-        <title>Dhaiwat Pandya</title>
-        <link rel='icon' href={favicon} />
-      </Helmet>
+      <Meta />
       <div
         id='container'
         className='flex flex-col bg-accentedBlack font-mono text-white mx-auto p-4 sm:p-4 md:p-16 lg:px-32 lg:py-16 lg:flex-row xl:flex-row xl:px-64'
