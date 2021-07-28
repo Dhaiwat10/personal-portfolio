@@ -22,6 +22,10 @@ const Projects = () => (
     <br />
 
     <span>- </span>
+    <Link label='Supabase' href='https://github.com/supabase/supabase' />
+    <br />
+
+    <span>- </span>
     <Link label='daily.dev' href='https://github.com/dailydotdev/apps' />
     <br />
 
@@ -161,7 +165,7 @@ const IndexPage = () => {
         }}
       >
         <img
-          className='rounded-full h-32 mx-auto mb-8 lg:order-2 xl:order-2 lg:h-40 lg:ml-auto lg:mr-0 xl:h-64 xl:ml-auto xl:mr-0'
+          className='fadeIn rounded-full h-32 mx-auto mb-8 lg:order-2 xl:order-2 lg:h-40 lg:ml-auto lg:mr-0 xl:h-64 xl:ml-auto xl:mr-0'
           src={avi}
           alt='Avatar'
         />
