@@ -1,6 +1,7 @@
 import * as React from 'react';
 import cursor from '../images/cursor.gif';
 import avi from '../images/avi.jpeg';
+import downIcon from '../images/down.png';
 import { Counter, Meta } from '../components';
 
 const Link = ({ label, href }) => (
@@ -116,24 +117,14 @@ const IndexPage = () => {
     if (!completed) {
       setTimeout(() => {
         setCounter((counter) => counter + 1);
-      }, [25]);
+      }, [12]);
     }
   }, [counter, completed]);
-
-  React.useEffect(() => {
-    if (completed) {
-      scrollToBottom();
-    }
-  }, [completed]);
 
   // Scroll to top on first render
   React.useEffect(() => {
     scrollToTop();
   }, []);
-
-  const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
