@@ -4,21 +4,12 @@ import { Helmet } from 'react-helmet';
 import favicon from '../images/favicon-16x16.png';
 import thumb from '../images/thumb.png';
 
-const Counter = ({ text, number, speed = 500, color }) => {
-  const [counter, setCounter] = React.useState(0);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      if (counter !== number) {
-        setCounter((counter) => counter + speed);
-      }
-    }, 50);
-  }, [counter, number, speed]);
+const Counter = ({ text, number,  color }) => {
 
   return (
     <div className="flex flex-col ml-0">
       <span className="font-bold text-2xl" style={{ color }}>
-        {commaNumber(counter)}+
+        {commaNumber(number)}+
       </span>
       <span>{text}</span>
     </div>

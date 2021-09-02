@@ -1,5 +1,4 @@
 import * as React from 'react';
-import cursor from '../images/cursor.gif';
 import avi from '../images/avi.jpeg';
 import { Counter, Meta } from '../components';
 
@@ -10,7 +9,7 @@ const Link = ({ label, href }) => (
 );
 
 const Projects = () => (
-  <div style={{ marginBottom: '-18px' }} className="fadeIn">
+  <div>
     <span style={{ borderRight: 'none' }}>- </span>
     <Link
       label="react-link-preview"
@@ -30,6 +29,13 @@ const Projects = () => (
     <Link
       label="Project Lockdown"
       href="https://github.com/TheIOFoundation/ProjectLockdown/"
+    />
+    <br />
+
+    <span>- </span>
+    <Link
+      label="react-agora"
+      href="https://www.npmjs.com/package/react-agora"
     />
     <br />
 
@@ -56,70 +62,7 @@ const Projects = () => (
   </div>
 );
 
-const Blog = () => {
-  let msg = `> ✍ I write about building quality software at `;
-  let msg2 = ` and `;
-
-  return (
-    <>
-      <div>
-        <span className="fadeIn">
-          {msg}{' '}
-          <a
-            id="blog-link"
-            href="https://blog.dhaiwatpandya.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            my blog
-          </a>
-          <br />
-          {msg2}
-          <a
-            id="blog-link"
-            href="https://www.youtube.com/watch?v=rZZItYsH8qg"
-            target="_blank"
-            rel="noreferrer"
-          >
-            speak at conferences
-          </a>
-          .
-        </span>
-      </div>
-      <br />
-      <div className="flex gap-16 fadeIn">
-        <Counter
-          number={200000}
-          text="users reached"
-          speed={5000}
-          color="#ff7092"
-        />
-        <Counter number={16000} text="readers reached" color="#ffde82" />
-      </div>
-    </>
-  );
-};
-
-const INPUT =
-  "> Hi!👋 I'm Dhaiwat. I am a 20-year-old software engineer.\n\n> ⚡️ I am highly proficient with:\n- React\n- TypeScript\n- Serverless\n- Solidity\n\n~\n > ❤️ Live projects that I have worked on:\n% \n\n> 🔨 What I can build for you:\n- A full-stack web app\n- An ethereum smart contract\n- A Chrome extension\n- A Discord bot\n- And more!\n\n> Impressed? 👀 Let's talk! 👇🏼";
-
-// markup
 const IndexPage = () => {
-  const [counter, setCounter] = React.useState(0);
-  const [completed, setCompleted] = React.useState(false);
-
-  React.useEffect(() => {
-    if (counter === INPUT.length) {
-      setCompleted(true);
-    }
-
-    if (!completed) {
-      setTimeout(() => {
-        setCounter((counter) => counter + 1);
-      }, [12]);
-    }
-  }, [counter, completed]);
-
   // Scroll to top on first render
   React.useEffect(() => {
     scrollToTop();
@@ -143,36 +86,72 @@ const IndexPage = () => {
         }}
       >
         <img
-          className="fadeIn rounded-full h-32 mx-auto mb-8 lg:order-2 xl:order-2 lg:h-40 lg:ml-auto lg:mr-0 xl:h-64 xl:ml-auto xl:mr-0"
+          className="rounded-full h-32 mx-auto mb-8 lg:order-2 xl:order-2 lg:h-40 lg:ml-auto lg:mr-0 xl:h-64 xl:ml-auto xl:mr-0"
           src={avi}
           alt="Avatar"
         />
-        <div className="content lg:order-1 xl:order-1">
-          {INPUT.slice(0, counter)
-            .split('')
-            .map((item, index) => {
-              if (item === '\n') {
-                return <br key={index} />;
-              } else if (item === '%') {
-                return <Projects key={index} />;
-              } else if (item === '~') {
-                return <Blog key={index} />;
-              } else {
-                return item;
-              }
-            })}
-          <img alt="Cursor" src={cursor} id="cursor" />
-          {completed && (
-            <div className="bottom-links mt-4 fadeIn">
-              <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
-              <Link label="GitHub" href="https://github.com/Dhaiwat10" />
-              <Link label="Blog" href="https://blog.dhaiwatpandya.com" />
-              <Link
-                label="LinkedIn"
-                href="https://linkedin.com/in/dhaiwat-pandya"
-              />
-            </div>
-          )}
+        <div className="content lg:order-1 xl:order-1 flex flex-col gap-6">
+          <p>&gt; Hi!<span role="img" aria-label="wave">👋</span> I'm Dhaiwat. I am a 20-year-old software engineer.</p>
+
+          <p>&gt; <span role="img" aria-label="lightning">⚡️</span> I am highly proficient with:</p>
+          <ul>
+            <li>- React</li>
+            <li>- TypeScript</li>
+            <li>- Serverless</li>
+          </ul>
+
+          <p>
+            &gt; <span role="img" aria-label="writing">✍</span> I write about building quality software at{' '}
+            <a
+              id="blog-link"
+              href="https://blog.dhaiwatpandya.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              my blog
+            </a>{' '}
+            and{' '}
+            <a
+              id="blog-link"
+              href="https://www.youtube.com/watch?v=rZZItYsH8qg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              speak at conferences
+            </a>
+            .{' '}
+          </p>
+
+          <div className="flex gap-16">
+            <Counter
+              number={500000}
+              text="users reached"
+              color="#ff7092"
+            />
+            <Counter number={20000} text="readers reached" color="#ffde82" />
+          </div>
+
+          <p>&gt; <span role="img" aria-label="heart">❤️</span> Live projects that I have worked on:</p>
+          <Projects />
+
+          <p>&gt; <span role="img" aria-label="hammer">🔨</span> What I can build for you:</p>
+          <ul>
+            <li>- A full-stack web app</li>
+            <li>- An ethereum smart contract</li>
+            <li>- A Chrome extension</li>
+            <li>- A Discord bot</li>
+          </ul>
+
+          <p>&gt; Impressed? <span role="img" aria-label="eyes">👀</span> Let's talk! 👇🏼</p>
+          <div className="bottom-links mt-4 fadeIn">
+            <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
+            <Link label="GitHub" href="https://github.com/Dhaiwat10" />
+            <Link label="Blog" href="https://blog.dhaiwatpandya.com" />
+            <Link
+              label="LinkedIn"
+              href="https://linkedin.com/in/dhaiwat-pandya"
+            />
+          </div>
         </div>
       </div>
     </main>
