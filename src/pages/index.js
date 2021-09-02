@@ -1,7 +1,6 @@
 import * as React from 'react';
 import cursor from '../images/cursor.gif';
 import avi from '../images/avi.jpeg';
-import downIcon from '../images/down.png';
 import { Counter, Meta } from '../components';
 
 const Link = ({ label, href }) => (
