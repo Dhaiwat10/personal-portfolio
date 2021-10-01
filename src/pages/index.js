@@ -18,18 +18,19 @@ const Projects = () => (
     <br />
 
     <span>- </span>
+    <Link label="run-wasm" href="https://github.com/sliphq/run-wasm" />
+    <br />
+
+    <span>- </span>
+    <Link label="Developer DAO" href="https://github.com/developer-dao" />
+    <br />
+
+    <span>- </span>
     <Link label="Supabase" href="https://github.com/supabase/supabase" />
     <br />
 
     <span>- </span>
     <Link label="daily.dev" href="https://github.com/dailydotdev/apps" />
-    <br />
-
-    <span>- </span>
-    <Link
-      label="Project Lockdown"
-      href="https://github.com/TheIOFoundation/ProjectLockdown/"
-    />
     <br />
 
     <span>- </span>
@@ -48,10 +49,6 @@ const Projects = () => (
 
     <span>- </span>
     <Link label="Zen" href="https://github.com/Dhaiwat10/zenquotes" />
-    <br />
-
-    <span>- </span>
-    <Link label="Barça Universal" href="https://barcauniversal.com" />
     <br />
 
     <span>- </span>
@@ -122,28 +119,28 @@ const IndexPage = () => {
             .{' '}
           </p>
 
-          <div className="flex gap-16">
+          {/* <div className="flex gap-16">
             <Counter
               number={500000}
               text="users reached"
               color="#ff7092"
             />
             <Counter number={20000} text="readers reached" color="#ffde82" />
-          </div>
+          </div> */}
 
           <p>&gt; <span role="img" aria-label="heart">❤️</span> Live projects that I have worked on:</p>
           <Projects />
 
-          <p>&gt; <span role="img" aria-label="hammer">🔨</span> What I can build for you:</p>
+          {/* <p>&gt; <span role="img" aria-label="hammer">🔨</span> What I can build for you:</p>
           <ul>
             <li>- A full-stack web app</li>
             <li>- An ethereum smart contract</li>
             <li>- A Chrome extension</li>
             <li>- A Discord bot</li>
-          </ul>
+          </ul> */}
 
           <p>&gt; Impressed? <span role="img" aria-label="eyes">👀</span> Let's talk! 👇🏼</p>
-          <div className="bottom-links mt-4 fadeIn">
+          <div className="bottom-links">
             <Link label="Email" href="mailto:dhaiwatpandya@gmail.com" />
             <Link label="GitHub" href="https://github.com/Dhaiwat10" />
             <Link label="Blog" href="https://blog.dhaiwatpandya.com" />
