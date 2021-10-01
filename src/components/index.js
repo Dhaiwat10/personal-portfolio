@@ -22,7 +22,7 @@ const Meta = () => {
 
   return (
     <Helmet>
-      <meta property="og:image" content={`https://dhaiwatpandya.com${thumb}`} />
+      <meta property="og:image" content={`https://dhaiwat.com${thumb}`} />
       <meta charSet="utf-8" />
       <meta name="description" content={description} />
 
@@ -34,7 +34,7 @@ const Meta = () => {
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content={`https://dhaiwatpandya.com${thumb}`}
+        content={`https://dhaiwat.com${thumb}`}
       />
 
       <title>Dhaiwat Pandya</title>

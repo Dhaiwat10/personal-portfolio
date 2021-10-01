@@ -42,6 +42,13 @@ const Projects = () => (
 
     <span>- </span>
     <Link
+      label="react-agora"
+      href="https://www.npmjs.com/package/react-agora"
+    />
+    <br />
+
+    <span>- </span>
+    <Link
       label="Ropsten Faucet"
       href="https://github.com/dhaiwat10/ropsten-faucet"
     />
